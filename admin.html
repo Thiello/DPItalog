@@ -1,0 +1,31 @@
+<!-- admin.html -->
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login RH</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container" id="login-admin">
+    <h2>Login RH</h2>
+    <input type="text" id="admin-user" placeholder="Usuário">
+    <input type="password" id="admin-pass" placeholder="Senha">
+    <button class="btn" onclick="logarAdmin()">Entrar</button>
+  </div>
+
+  <div class="container painel-rh" id="painel-rh" style="display:none;">
+    <h2>Painel do RH</h2>
+    <input type="text" id="pesquisa-nome" placeholder="Pesquisar por nome..." onkeyup="filtrarUsuarios()">
+    <input type="file" id="upload" multiple accept="application/pdf">
+    <p>Os PDFs devem estar nomeados com o nome completo do funcionário.</p>
+    <button class="btn" onclick="importarPDFs()">Importar PDFs</button>
+    <h3>Funcionários:</h3>
+    <ul id="lista-aprovacoes"></ul>
+    <div id="status-importacao"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
